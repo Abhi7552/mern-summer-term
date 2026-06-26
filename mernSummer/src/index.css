@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: dark;
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* One accent family — warm brass, like a backlit switch glow through a
+     keycap — instead of competing teal/lime/purple/magenta hues. */
+  --bg: #0d0d11;
+  --surface: #17181f;
+  --surface-strong: #1c1d26;
+  --border: rgba(255, 255, 255, 0.08);
+  --text: #f3efe6;
+  --text-muted: #9d99a6;
+  --accent: #e8a33d;
+  --accent-soft: #f3c879;
+  --accent-deep: #8a5523;
+
+  background:
+    radial-gradient(circle at 12% 0%, rgba(232, 163, 61, 0.14), transparent 38%),
+    radial-gradient(circle at 88% 8%, rgba(232, 163, 61, 0.07), transparent 30%),
+    var(--bg);
+  color: var(--text);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: inherit;
+  color: inherit;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+
+button {
+  font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--accent-soft);
+  outline-offset: 3px;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(232, 163, 61, 0.28);
+  color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
